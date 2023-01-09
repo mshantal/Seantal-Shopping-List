@@ -1,0 +1,31 @@
+<div class="border-b-2 border-[#028476] mx-auto w-[350px] mb-4 mt-20">
+    <h1 class="text-center text-[#028476] text-2xl uppercase">Shopping List</h1>
+</div>
+
+ <div class="max-w-max mx-auto flex gap-8 text-sm mb-12">
+  <a routerLink="/shopping-list">Shopping List</a>
+  <a routerLink="/category-list">Category-List'</a>
+ </div>
+ 
+<div>
+    <form (submit)="handleSubmit()">
+        <h1>Add New Item</h1>
+        <label for="">Item Name</label>
+        <input type="text" name="item_name" [(ngModel)]="data.item_name">
+
+
+        <label for="">Category</label>
+        <select name="category" id="" [(ngModel)]="data.category">
+            <option *ngFor="let category of categories" [value]="category._id">{{category.name}}</option>
+        </select>
+
+        <label for="">Price</label>
+        <input type="number" name="price" [(ngModel)]="data.price" >
+
+        <label for="">Quantity</label>
+        <input type="number" name="quantity" [(ngModel)]="data.quantity" >
+
+        <button type="submit">Edit Item</button>
+    </form>
+</div>
+

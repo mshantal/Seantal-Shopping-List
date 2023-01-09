@@ -1,0 +1,19 @@
+.nav {
+    display: flex;
+    width: 100%;
+    justify-items: end;
+    background-color: #028476;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    color: #fff;
+    font-style: oblique;
+}
+
+.nav .start {
+    margin-right: auto;
+}
+
+.nav a {
+    padding: 10px 15px;
+}
